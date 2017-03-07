@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    ViewBag.u = "";
+    ViewBag.p = "";
+    
+}
+
+<script>
+window.onload = function()
+    {
+        document.getElementById('btn').onclick = function()
+    {
+            
+      $("#page").val();
+        }
+    }
+</script>
+<div class="block">
+    <p>
+        @Html.TextBox("url")
+        <button class="button" id="btn">Request</button>
+    </p>
+    <p>@Html.TextArea("page")</p>
+    <p><textarea id="page" value=""></textarea></p>
+    <p><textarea id="js"></textarea></p>
+    <p><button class="button">Run</button></p>
+    <p><textarea id="js"></textarea></p>
+</div>
+
