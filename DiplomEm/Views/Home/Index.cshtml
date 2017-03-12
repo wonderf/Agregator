@@ -1,30 +1,27 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
-    ViewBag.u = "";
-    ViewBag.p = "";
+    ViewBag.Title = "Start Page";
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        UpdateTargetId = "page",
     
-}
+    };
 
-<script>
-window.onload = function()
-    {
-        document.getElementById('btn').onclick = function()
-    {
-            
-      $("#page").val();
-        }
-    }
-</script>
+}
 <div class="block">
     <p>
-        @Html.TextBox("url")
-        <button class="button" id="btn">Request</button>
+        @using (Ajax.BeginForm("GetUrlPage", new AjaxOptions {UpdateTargetId="page" }))
+        {
+            @Html.TextBox("url")
+            <button class="button" id="btn">Request</button>
+        }
     </p>
-    <p>@Html.TextArea("page")</p>
-    <p><textarea id="page" value=""></textarea></p>
-    <p><textarea id="js"></textarea></p>
-    <p><button class="button">Run</button></p>
-    <p><textarea id="js"></textarea></p>
+    <p>@Html.TextArea("page",ViewData["url"])</p>
+    @using (Ajax.BeginForm("GetJsonResult", new AjaxOptions { UpdateTargetId = "result" }))
+    {
+        <p>@Html.TextArea("js")</p>
+        <p><button class="button">Run</button></p>
+    }
+    <p>@Html.TextArea("result")</p>
 </div>
 
