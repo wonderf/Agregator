@@ -1,0 +1,1 @@
+call npm install deferred jquery jsdom

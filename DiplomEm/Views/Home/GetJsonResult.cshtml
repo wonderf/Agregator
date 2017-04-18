@@ -1,0 +1,15 @@
+﻿@foreach (DiplomEm.Core.News it in ViewBag.News)
+{
+    <tr>
+        <td valign="top" style="padding-top:20px">
+            <a title="@it.title" href="@it.url">
+                <img src="@it.img" width="70" height="50"
+                     alt="@it.title" align="left" border="0" vspace="1" hspace="5">
+            </a>
+        </td>
+        <td width="100%" valign="top">
+            <br><a title="@it.title" href="@it.url" class="news"><strong>@it.title</strong></a><br>
+            @it.text
+        </td>
+    </tr>
+}

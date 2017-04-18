@@ -1,0 +1,22 @@
+﻿@model IEnumerable<DiplomEm.Core.News>
+@{
+    ViewBag.Title = "Result";
+}
+
+<table class="table">
+@foreach (var item in Model) {
+    <tr>
+        <td valign="top" style="padding-top:20px">
+            <a title="@item.title" href="@item.url">
+                <img src="@item.img" width="70" height="50"
+                     alt="@item.title" align="left" border="0" vspace="1" hspace="5">
+            </a>
+        </td>
+        <td width="100%" valign="top">
+            <br><a title="@item.title" href="@item.url" class="news"><strong>@item.title</strong></a><br>
+            @item.text
+        </td>
+    </tr>
+}
+
+</table>

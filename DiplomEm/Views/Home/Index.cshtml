@@ -1,27 +1,77 @@
 ﻿
 @{
     ViewBag.Title = "Start Page";
-    AjaxOptions ajaxOptions = new AjaxOptions
-    {
-        UpdateTargetId = "page",
-    
-    };
-
 }
+<div id="updown"></div>
 <div class="block">
     <p>
-        @using (Ajax.BeginForm("GetUrlPage", new AjaxOptions {UpdateTargetId="page" }))
+        @using (Ajax.BeginForm("GetUrlPage", new AjaxOptions {UpdateTargetId="page", OnSuccess = "autosize($('#page'))" }))
         {
             @Html.TextBox("url")
-            <button class="button" id="btn">Request</button>
+            <button class="button" id="btn" >Request</button>
         }
     </p>
-    <p>@Html.TextArea("page",ViewData["url"])</p>
-    @using (Ajax.BeginForm("GetJsonResult", new AjaxOptions { UpdateTargetId = "result" }))
+    <p>@Html.TextArea("page", ViewData["url"])</p>
+    @using (Ajax.BeginForm("GetJsonResult", new AjaxOptions {UpdateTargetId="news",OnSuccess="$('#taskCreator').css('visibility','visible')" }))
     {
         <p>@Html.TextArea("js")</p>
         <p><button class="button">Run</button></p>
     }
-    <p>@Html.TextArea("result")</p>
+    <table id="news"></table>
+    <div id="taskCreator">
+        <p><label>Создание задачи</label>
+        <p>Время,мин</p>
+        </p>
+        @using (Ajax.BeginForm("CreateTask", new AjaxOptions { OnComplete = "$('#result').html('Задача сохранена');" }))
+        {
+            <input type="number" size="10" name="time" min="0" max="10000" value="1">
+            <button class="button">Execute</button>
+        }
+    </div>
+    <label id="result"></label>
 </div>
+<script>
+    
+    var updownElem = document.getElementById('updown');
+    setTimeout("autosize($('#js'))", 500);
+    var pageYLabel = 0;
+    
+    updownElem.onclick = function () {
+        var pageY = window.pageYOffset || document.documentElement.scrollTop;
 
+        switch (this.className) {
+            case 'up':
+                $('html,body').animate({ scrollTop: pageYLabel }, 500);
+                this.className = 'down';
+                break;
+
+            case 'down':
+                pageYLabel = pageY;
+                $('html,body').animate({ scrollTop: $('#js').offset().top }, 500);
+                this.className = 'up';
+        }
+
+    }
+
+    window.onscroll = function () {
+        var pageY = window.pageYOffset || document.documentElement.scrollTop;
+        var innerHeight = document.documentElement.clientHeight;
+        var scrollHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight);
+        switch (updownElem.className) {
+            case '':
+                if (pageY > innerHeight) {
+                    updownElem.className = 'down';
+                }
+                break;
+
+            case 'down':
+                if (scrollHeight-pageY<innerHeight) {
+                    updownElem.className = 'up';
+                }
+                break;
+        }
+    }
+    </script>

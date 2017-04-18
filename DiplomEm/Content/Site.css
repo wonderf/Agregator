@@ -25,20 +25,40 @@
     width:500px;
 }
 #page{
-    text-align:start;
-    margin:auto;
-    text-align:center;
     width:575px;
     height:300px;
 }
-#js,#result{
-    margin:auto;
-    margin-top:1%;
-    margin-bottom:1%;
-    text-align:center;
+#js{
     width:575px;
 }
 #run{
     transform: translateX(-270px);
 }
+#updown {
+  position: fixed;
+  top: 30px;
+  left: 10px;
+  cursor: pointer;
+}
+#updown {
+  height: 128px;
+  width: 128px;
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  cursor: pointer;
+}
+
+#updown.up {
+  background: url(up.png) left top;
+}
+
+#updown.down {
+  background: url(down.png) left top;
+}
+#taskCreator{
+    visibility:hidden;
+    padding-top:30px;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */

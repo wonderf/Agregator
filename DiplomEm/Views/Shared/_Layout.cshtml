@@ -10,6 +10,8 @@
     <script src="~/Scripts/worker.js"></script>
     <script src="~/Scripts/jquery-3.1.1.min.js"></script>
     <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/autosize.js"></script>
+    <script src="~/Scripts/scroll.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -24,19 +26,34 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li class="active"><a href="~/">Home</a></li>
+                    <li><a href="hangfire">Hangfire</a></li>
+                    <li><a href="results">Results</a></li>
+                    <li><a href="~/log.txt">Logger</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="container body-content">
+        
         @RenderBody()
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Diplom</p>
         </footer>
     </div>
-
+    <script>
+        $(document).ready(function () {
+            var url = window.location;
+            $('.navbar .nav').find('.active').removeClass('active');
+            $('.navbar .nav li a').each(function () {
+                if (this.href == url) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
+    </script>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
