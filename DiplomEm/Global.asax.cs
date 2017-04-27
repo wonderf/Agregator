@@ -9,7 +9,7 @@ using Ninject;
 using DiplomEm.Core;
 using DiplomEm.Core.Objects;
 using Hangfire;
-
+using System.Web.Configuration;
 namespace DiplomEm
 {
     public class MvcApplication : NinjectHttpApplication
