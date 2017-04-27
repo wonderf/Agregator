@@ -13,12 +13,9 @@ namespace DiplomEm.App_Start
     {
         public void Configuration(IAppBuilder app)
         {
-            //GlobalConfiguration.Configuration.UseSqlServerStorage("Data Source=DESKTOP-LR1A8BU;Initial Catalog=hangflare;Integrated Security=True");
-
             String conn = WebConfigurationManager.ConnectionStrings["hangfire"].ToString();
                 if (conn != null)
                     GlobalConfiguration.Configuration.UseSqlServerStorage(conn.ToString());
-                    //todo make db in memory
             GlobalConfiguration.Configuration.UseNinjectActivator(new Ninject.Web.Common.Bootstrapper().Kernel);
             app.UseHangfireDashboard();
             app.UseHangfireServer();

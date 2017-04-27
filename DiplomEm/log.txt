@@ -3030,3 +3030,31 @@
 2017-04-27 13:57:52.9348|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
 2017-04-27 13:58:23.9905|INFO|DiplomEm.TaskExecutor|execute task
 2017-04-27 14:00:03.2271|INFO|DiplomEm.TaskExecutor|execute task
+2017-04-28 01:41:03.7698|INFO|DiplomEm.MvcApplication|Application Start
+2017-04-28 01:41:08.2382|INFO|Hangfire.SqlServer.SqlServerStorage|Start installing Hangfire SQL objects...
+2017-04-28 01:41:10.2831|INFO|Hangfire.SqlServer.SqlServerStorage|Hangfire SQL objects installed.
+2017-04-28 01:41:10.4016|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server
+2017-04-28 01:41:10.4016|INFO|Hangfire.BackgroundJobServer|Using job storage: 'SQL Server: DESKTOP-LR1A8BU@hangflare'
+2017-04-28 01:41:10.4216|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage:
+2017-04-28 01:41:10.4216|INFO|Hangfire.BackgroundJobServer|    Queue poll interval: 00:00:15.
+2017-04-28 01:41:10.4397|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+2017-04-28 01:41:10.4487|INFO|Hangfire.BackgroundJobServer|    Worker count: 20
+2017-04-28 01:41:10.4487|INFO|Hangfire.BackgroundJobServer|    Listening queues: 'default'
+2017-04-28 01:41:10.4688|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
+2017-04-28 01:41:10.4688|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
+2017-04-28 01:41:15.7962|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2017-04-28 01:41:58.4874|INFO|DiplomEm.TaskExecutor|execute task
+2017-04-28 01:41:58.5343|INFO|DiplomEm.TaskExecutor|execute task
+2017-04-28 01:42:30.5034|INFO|DiplomEm.MvcApplication|Application Start
+2017-04-28 01:42:30.9596|INFO|Hangfire.SqlServer.SqlServerStorage|Start installing Hangfire SQL objects...
+2017-04-28 01:42:31.1102|INFO|Hangfire.SqlServer.SqlServerStorage|Hangfire SQL objects installed.
+2017-04-28 01:42:31.1553|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server
+2017-04-28 01:42:31.1683|INFO|Hangfire.BackgroundJobServer|Using job storage: 'SQL Server: DESKTOP-LR1A8BU@hangflare'
+2017-04-28 01:42:31.1683|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage:
+2017-04-28 01:42:31.1894|INFO|Hangfire.BackgroundJobServer|    Queue poll interval: 00:00:15.
+2017-04-28 01:42:31.2014|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+2017-04-28 01:42:31.2134|INFO|Hangfire.BackgroundJobServer|    Worker count: 20
+2017-04-28 01:42:31.2285|INFO|Hangfire.BackgroundJobServer|    Listening queues: 'default'
+2017-04-28 01:42:31.2285|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
+2017-04-28 01:42:31.2475|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
+2017-04-28 01:42:39.8373|INFO|DiplomEm.TaskExecutor|execute task

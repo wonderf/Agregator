@@ -23,7 +23,7 @@ namespace DiplomEm.Core
                         .Database(MsSqlConfiguration.MsSql2012.ConnectionString(WebConfigurationManager.ConnectionStrings["storage"].ToString()))
                         .Cache(c => c.UseQueryCache().ProviderClass<HashtableCacheProvider>())
                         .Mappings(m => m.FluentMappings.AddFromAssemblyOf<News>())
-                        .ExposeConfiguration(cfg => new SchemaExport(cfg).Execute(false,false,false))
+                        .ExposeConfiguration(cfg => new SchemaExport(cfg).Execute(false, true, false))
                         .BuildConfiguration()
                         .BuildSessionFactory()
                 )
