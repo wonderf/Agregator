@@ -1,6 +1,4 @@
-﻿using NHibernate;
-using NHibernate.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,39 +8,40 @@ namespace DiplomEm.Core.Objects
 {
     public class NewsRepository : INewsRepository
     {
-        private readonly ISession _session;
-        public NewsRepository(ISession session)
+        private readonly NewsContext _context;
+        public NewsRepository(NewsContext context)
         {
-            _session = session;
+            _context=context;
         }
 
         public void insertNews(List<News> n)
         {
-            var table = _session.Query<News>().ToList();
+            var table = NewsList();
             List<News> ins = new List<News>();
             ins.AddRange(n);
             foreach(var e in table)
             {
                 ins.RemoveAll(x=>x.url==e.url&&x.title==e.title);
             }
-            var tx =_session.BeginTransaction();
-            for(int i = 0; i < ins.Count; i++)
+            var tr = _context.Database.BeginTransaction();
+            try
             {
-                _session.Save(ins[i]);
-                if (i % 20==0)
+                for (int i = 0; i < ins.Count; i++)
                 {
-                    _session.Flush();
-                    _session.Clear();
+                    _context.NewsSet.Add(ins[i]);
                 }
+                _context.SaveChanges();
+                tr.Commit();
             }
-            _session.Flush();
-            _session.Clear();
-            tx.Commit();
+            catch(Exception e)
+            {
+                tr.Rollback();
+            }
         }
 
         public IList<News> NewsList()
         {
-            return _session.Query<News>().ToList();
+            return _context.NewsSet.ToList();
         }
     }
 }

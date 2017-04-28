@@ -1,23 +1,24 @@
-﻿using FluentNHibernate.Mapping;
+﻿
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DiplomEm.Core.Mappings
 {
-    class NewsMap : ClassMap<News>
+    class NewsMap : EntityTypeConfiguration<News>
     {
         public NewsMap()
         {
-            Table("NewsSet");
-            Id(x => x.id).GeneratedBy.Identity();
-            Map(x => x.title);
-            Map(x => x.text);
-            Map(x => x.img);
-            Map(x => x.url);
-        
+            HasKey(x => x.id);
+            Property(x => x.id).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
+            Property(x => x.title);
+            Property(x => x.text);
+            Property(x => x.img);
+            Property(x => x.url);
+            ToTable("NewsSet");
         }
     }
 }
