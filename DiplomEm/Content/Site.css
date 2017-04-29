@@ -41,8 +41,8 @@
   cursor: pointer;
 }
 #updown {
-  height: 128px;
-  width: 128px;
+  height: 40px;
+  width: 40px;
   position: fixed;
   top: 50px;
   left: 10px;
@@ -50,11 +50,13 @@
 }
 
 #updown.up {
-  background: url(up.png) left top;
+  background: url(up.jpg) left top;
+  background-size: 40px 40px;
 }
 
 #updown.down {
-  background: url(down.png) left top;
+  background: url(down.jpg) left top;
+  background-size: 40px 40px;
 }
 #taskCreator{
     visibility:hidden;

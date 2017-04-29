@@ -14,7 +14,7 @@
     <p>@Html.TextArea("page", ViewData["url"])</p>
     @using (Ajax.BeginForm("GetJsonResult", new AjaxOptions {UpdateTargetId="news",OnSuccess="$('#taskCreator').css('visibility','visible')" }))
     {
-        <p>@Html.TextArea("js")</p>
+        <p>@Html.TextArea("js",new { @placeholder = "must return JSON.stringify" })</p>
         <p><button class="button">Run</button></p>
     }
     <table id="news"></table>

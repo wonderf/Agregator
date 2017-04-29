@@ -10,7 +10,7 @@ namespace DiplomEm.Core
     public class NewsContext :DbContext
     {
         public NewsContext() : base(WebConfigurationManager.ConnectionStrings["storage"].ToString())
-        {}
+        {  }
 
         public DbSet<News> NewsSet { get; set; }
 

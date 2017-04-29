@@ -10,18 +10,13 @@ using DiplomEm.Core;
 using DiplomEm.Core.Objects;
 using Hangfire;
 using System.Web.Configuration;
+using System.Data.Entity;
+
 namespace DiplomEm
 {
     public class MvcApplication : NinjectHttpApplication
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
-        //protected void Application_Start()
-        //{
-        //    logger.Info("Application Start");
-        //    AreaRegistration.RegisterAllAreas();
-        //    RouteConfig.RegisterRoutes(RouteTable.Routes);
-        //}
-
         protected override IKernel CreateKernel()
         {
             var kernel = new StandardKernel();

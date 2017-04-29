@@ -13,6 +13,7 @@ namespace DiplomEm
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(null, "results", defaults: new { action = "Index", controller = "Result" });
+            routes.MapRoute(null, "log", defaults: new { action = "Index", controller = "Log" });
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

@@ -192,8 +192,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\down.jpg" />
     <Content Include="Content\down.png" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\up.jpg" />
     <Content Include="Content\up.png" />
     <Content Include="edge\double_edge.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -245,6 +247,7 @@
     <Compile Include="App_Start\Owin.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
     <Compile Include="Controllers\ResultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -266,6 +269,7 @@
     <Content Include="Views\Home\GetUrlPage.cshtml" />
     <Content Include="Views\Home\GetJsonResult.cshtml" />
     <Content Include="Views\Result\Index.cshtml" />
+    <Content Include="Views\Log\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
