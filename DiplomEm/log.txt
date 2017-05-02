@@ -229,3 +229,283 @@
 2017-04-29 20:20:23.2855|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
 2017-04-29 20:20:23.2855|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
 2017-04-29 20:20:23.5873|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2017-05-02 23:20:38.7797|INFO|DiplomEm.MvcApplication|Application Start
+2017-05-02 23:20:44.5020|INFO|Hangfire.SqlServer.SqlServerStorage|Start installing Hangfire SQL objects...
+2017-05-02 23:20:48.5171|INFO|Hangfire.SqlServer.SqlServerStorage|Hangfire SQL objects installed.
+2017-05-02 23:20:48.7265|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server
+2017-05-02 23:20:48.7405|INFO|Hangfire.BackgroundJobServer|Using job storage: 'SQL Server: DESKTOP-LR1A8BU@hangflare'
+2017-05-02 23:20:48.7405|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage:
+2017-05-02 23:20:48.7405|INFO|Hangfire.BackgroundJobServer|    Queue poll interval: 00:00:15.
+2017-05-02 23:20:48.7585|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+2017-05-02 23:20:48.7585|INFO|Hangfire.BackgroundJobServer|    Worker count: 20
+2017-05-02 23:20:48.7695|INFO|Hangfire.BackgroundJobServer|    Listening queues: 'default'
+2017-05-02 23:20:48.7695|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
+2017-05-02 23:20:48.7695|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
+2017-05-02 23:20:54.6590|INFO|Hangfire.Server.ServerWatchdog|4 servers were removed due to timeout
+2017-05-02 23:21:35.2638|INFO|DiplomEm.TaskExecutor|execute task
+2017-05-02 23:21:35.2638|INFO|DiplomEm.TaskExecutor|execute task
+2017-05-02 23:22:00.4459|ERROR|DiplomEm.Controllers.HomeController|Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[DiplomEm.Core.News]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'a', line 1, position 5.
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   в Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   в DiplomEm.Controllers.HomeController.GetJsonResult(String js) в C:\Users\Stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\Controllers\HomeController.cs:строка 98
+2017-05-02 23:24:43.4487|ERROR|DiplomEm.Controllers.HomeController|Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[DiplomEm.Core.News]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'a', line 1, position 5.
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   в Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   в DiplomEm.Controllers.HomeController.GetJsonResult(String js) в C:\Users\Stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\Controllers\HomeController.cs:строка 98
+2017-05-02 23:25:02.4211|INFO|DiplomEm.TaskExecutor|execute task
+2017-05-02 23:30:12.1262|INFO|DiplomEm.MvcApplication|Application Start
+2017-05-02 23:30:12.6382|INFO|Hangfire.SqlServer.SqlServerStorage|Start installing Hangfire SQL objects...
+2017-05-02 23:30:12.7605|INFO|Hangfire.SqlServer.SqlServerStorage|Hangfire SQL objects installed.
+2017-05-02 23:30:12.7986|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server
+2017-05-02 23:30:12.7986|INFO|Hangfire.BackgroundJobServer|Using job storage: 'SQL Server: DESKTOP-LR1A8BU@hangflare'
+2017-05-02 23:30:12.7986|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage:
+2017-05-02 23:30:12.8206|INFO|Hangfire.BackgroundJobServer|    Queue poll interval: 00:00:15.
+2017-05-02 23:30:12.8206|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+2017-05-02 23:30:12.8307|INFO|Hangfire.BackgroundJobServer|    Worker count: 20
+2017-05-02 23:30:12.8307|INFO|Hangfire.BackgroundJobServer|    Listening queues: 'default'
+2017-05-02 23:30:12.8457|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
+2017-05-02 23:30:12.8457|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
+2017-05-02 23:32:11.2713|INFO|DiplomEm.TaskExecutor|execute task
+2017-05-02 23:34:53.5060|INFO|DiplomEm.MvcApplication|Application Start
+2017-05-02 23:34:54.1493|INFO|Hangfire.SqlServer.SqlServerStorage|Start installing Hangfire SQL objects...
+2017-05-02 23:34:54.3081|INFO|Hangfire.SqlServer.SqlServerStorage|Hangfire SQL objects installed.
+2017-05-02 23:34:54.3642|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server
+2017-05-02 23:34:54.3642|INFO|Hangfire.BackgroundJobServer|Using job storage: 'SQL Server: DESKTOP-LR1A8BU@hangflare'
+2017-05-02 23:34:54.3853|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage:
+2017-05-02 23:34:54.3943|INFO|Hangfire.BackgroundJobServer|    Queue poll interval: 00:00:15.
+2017-05-02 23:34:54.3943|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+2017-05-02 23:34:54.4093|INFO|Hangfire.BackgroundJobServer|    Worker count: 20
+2017-05-02 23:34:54.4093|INFO|Hangfire.BackgroundJobServer|    Listening queues: 'default'
+2017-05-02 23:34:54.4093|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
+2017-05-02 23:34:54.4294|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
+2017-05-02 23:34:54.7209|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2017-05-02 23:35:18.8714|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:16.
+2017-05-02 23:35:38.1261|ERROR|DiplomEm.Controllers.HomeController|System.AggregateException: Произошла одна или несколько ошибок. ---> System.Exception: Error: Cannot find module 'jsdom'
+    at Function.Module._resolveFilename (module.js:455:15)
+    at Function.Module._load (module.js:403:25)
+    at Module.require (module.js:483:17)
+    at require (internal/module.js:20:19)
+    at eval (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:1:28)
+    at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:35:16)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в System.Threading.Tasks.Task.Wait()
+   в EdgeJs.Edge.Func(String code)
+   в DiplomEm.Controllers.HomeController.GetJsonResult(String js) в C:\Users\Stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\Controllers\HomeController.cs:строка 96
+---> (Внутреннее исключение #0) System.Exception: Error: Cannot find module 'jsdom'
+    at Function.Module._resolveFilename (module.js:455:15)
+    at Function.Module._load (module.js:403:25)
+    at Module.require (module.js:483:17)
+    at require (internal/module.js:20:19)
+    at eval (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:1:28)
+    at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:35:16)<---
+
+2017-05-02 23:36:21.6221|INFO|Hangfire.Server.DelayedJobScheduler|1 scheduled job(s) enqueued.
+2017-05-02 23:36:25.1972|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:42.
+2017-05-02 23:37:22.5773|INFO|Hangfire.Server.DelayedJobScheduler|1 scheduled job(s) enqueued.
+2017-05-02 23:37:26.4723|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 3 of 10 will be performed in 00:00:49.
+2017-05-02 23:38:23.1050|INFO|Hangfire.Server.DelayedJobScheduler|1 scheduled job(s) enqueued.
+2017-05-02 23:38:37.8211|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 4 of 10 will be performed in 00:01:48.
+2017-05-02 23:38:57.7358|ERROR|DiplomEm.Controllers.HomeController|System.AggregateException: Произошла одна или несколько ошибок. ---> System.Exception: Error: Cannot find module 'jsdom'
+    at Function.Module._resolveFilename (module.js:455:15)
+    at Function.Module._load (module.js:403:25)
+    at Module.require (module.js:483:17)
+    at require (internal/module.js:20:19)
+    at eval (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:1:28)
+    at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:35:16)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в System.Threading.Tasks.Task.Wait()
+   в EdgeJs.Edge.Func(String code)
+   в DiplomEm.Controllers.HomeController.GetJsonResult(String js) в C:\Users\Stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\Controllers\HomeController.cs:строка 96
+---> (Внутреннее исключение #0) System.Exception: Error: Cannot find module 'jsdom'
+    at Function.Module._resolveFilename (module.js:455:15)
+    at Function.Module._load (module.js:403:25)
+    at Module.require (module.js:483:17)
+    at require (internal/module.js:20:19)
+    at eval (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:1:28)
+    at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:35:16)<---
+
+2017-05-02 23:39:20.8081|INFO|DiplomEm.MvcApplication|Application Start
+2017-05-02 23:39:21.5956|INFO|Hangfire.SqlServer.SqlServerStorage|Start installing Hangfire SQL objects...
+2017-05-02 23:39:21.7290|INFO|Hangfire.SqlServer.SqlServerStorage|Hangfire SQL objects installed.
+2017-05-02 23:39:21.7962|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server
+2017-05-02 23:39:21.8052|INFO|Hangfire.BackgroundJobServer|Using job storage: 'SQL Server: DESKTOP-LR1A8BU@hangflare'
+2017-05-02 23:39:21.8052|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage:
+2017-05-02 23:39:21.8172|INFO|Hangfire.BackgroundJobServer|    Queue poll interval: 00:00:15.
+2017-05-02 23:39:21.8172|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+2017-05-02 23:39:21.8172|INFO|Hangfire.BackgroundJobServer|    Worker count: 20
+2017-05-02 23:39:21.8303|INFO|Hangfire.BackgroundJobServer|    Listening queues: 'default'
+2017-05-02 23:39:21.8303|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
+2017-05-02 23:39:21.8303|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
+2017-05-02 23:39:22.2333|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2017-05-02 23:39:50.6625|ERROR|DiplomEm.Controllers.HomeController|System.AggregateException: Произошла одна или несколько ошибок. ---> System.Exception: Error: Cannot find module 'jsdom'
+    at Function.Module._resolveFilename (module.js:455:15)
+    at Function.Module._load (module.js:403:25)
+    at Module.require (module.js:483:17)
+    at require (internal/module.js:20:19)
+    at eval (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:1:28)
+    at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:35:16)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   в System.Threading.Tasks.Task.Wait()
+   в EdgeJs.Edge.Func(String code)
+   в DiplomEm.Controllers.HomeController.GetJsonResult(String js) в C:\Users\Stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\Controllers\HomeController.cs:строка 96
+---> (Внутреннее исключение #0) System.Exception: Error: Cannot find module 'jsdom'
+    at Function.Module._resolveFilename (module.js:455:15)
+    at Function.Module._load (module.js:403:25)
+    at Module.require (module.js:483:17)
+    at require (internal/module.js:20:19)
+    at eval (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:1:28)
+    at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:35:16)<---
+
+2017-05-02 23:41:02.1822|INFO|DiplomEm.MvcApplication|Application Start
+2017-05-02 23:41:02.8275|INFO|Hangfire.SqlServer.SqlServerStorage|Start installing Hangfire SQL objects...
+2017-05-02 23:41:03.6857|INFO|Hangfire.SqlServer.SqlServerStorage|Hangfire SQL objects installed.
+2017-05-02 23:41:03.7568|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server
+2017-05-02 23:41:03.7568|INFO|Hangfire.BackgroundJobServer|Using job storage: 'SQL Server: DESKTOP-LR1A8BU@hangflare'
+2017-05-02 23:41:03.7719|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage:
+2017-05-02 23:41:03.7719|INFO|Hangfire.BackgroundJobServer|    Queue poll interval: 00:00:15.
+2017-05-02 23:41:03.7719|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+2017-05-02 23:41:03.7849|INFO|Hangfire.BackgroundJobServer|    Worker count: 20
+2017-05-02 23:41:03.7849|INFO|Hangfire.BackgroundJobServer|    Listening queues: 'default'
+2017-05-02 23:41:03.7849|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
+2017-05-02 23:41:03.7999|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
+2017-05-02 23:41:06.3376|INFO|Hangfire.Server.DelayedJobScheduler|1 scheduled job(s) enqueued.
+2017-05-02 23:41:29.0772|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 5 of 10 will be performed in 00:05:36.
+2017-05-02 23:42:05.6427|ERROR|DiplomEm.Controllers.HomeController|System.AggregateException: Произошла одна или несколько ошибок. ---> System.Exception: TypeError: jsdom.env is not a function
+    at extract (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:6:7)
+    at eval (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:20:1)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   в System.Threading.Tasks.Task`1.get_Result()
+   в DiplomEm.Controllers.HomeController.GetJsonResult(String js) в C:\Users\Stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\Controllers\HomeController.cs:строка 97
+---> (Внутреннее исключение #0) System.Exception: TypeError: jsdom.env is not a function
+    at extract (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:6:7)
+    at eval (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:20:1)<---
+
+2017-05-02 23:55:25.6000|INFO|DiplomEm.MvcApplication|Application Start
+2017-05-02 23:55:30.3448|INFO|Hangfire.SqlServer.SqlServerStorage|Start installing Hangfire SQL objects...
+2017-05-02 23:55:30.5890|INFO|Hangfire.SqlServer.SqlServerStorage|Hangfire SQL objects installed.
+2017-05-02 23:55:30.6392|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server
+2017-05-02 23:55:30.6482|INFO|Hangfire.BackgroundJobServer|Using job storage: 'SQL Server: DESKTOP-LR1A8BU@hangflare'
+2017-05-02 23:55:30.6482|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage:
+2017-05-02 23:55:30.6612|INFO|Hangfire.BackgroundJobServer|    Queue poll interval: 00:00:15.
+2017-05-02 23:55:30.6612|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+2017-05-02 23:55:30.6612|INFO|Hangfire.BackgroundJobServer|    Worker count: 20
+2017-05-02 23:55:30.6793|INFO|Hangfire.BackgroundJobServer|    Listening queues: 'default'
+2017-05-02 23:55:30.6793|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
+2017-05-02 23:55:30.6793|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
+2017-05-02 23:55:31.3188|INFO|Hangfire.Server.ServerWatchdog|3 servers were removed due to timeout
+2017-05-02 23:55:33.9923|INFO|Hangfire.Server.DelayedJobScheduler|1 scheduled job(s) enqueued.
+2017-05-02 23:55:56.7505|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '69': an exception occurred. Retry attempt 6 of 10 will be performed in 00:11:28.
+2017-05-02 23:56:05.2677|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '70': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:17.
+2017-05-02 23:56:35.9658|INFO|Hangfire.Server.DelayedJobScheduler|1 scheduled job(s) enqueued.
+2017-05-02 23:56:42.6997|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '70': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:32.
+2017-05-02 23:56:55.2389|ERROR|DiplomEm.Controllers.HomeController|System.AggregateException: Произошла одна или несколько ошибок. ---> System.Exception: TypeError: jsdom.env is not a function
+    at extract (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:6:7)
+    at eval (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:20:1)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   в System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   в System.Threading.Tasks.Task`1.get_Result()
+   в DiplomEm.Controllers.HomeController.GetJsonResult(String js) в C:\Users\Stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\Controllers\HomeController.cs:строка 97
+---> (Внутреннее исключение #0) System.Exception: TypeError: jsdom.env is not a function
+    at extract (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:6:7)
+    at eval (eval at compileFunc (c:\users\stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\bin\edge\double_edge.js:34:28), <anonymous>:20:1)<---
+
+2017-05-02 23:58:03.6031|INFO|DiplomEm.MvcApplication|Application Start
+2017-05-02 23:58:04.0840|INFO|Hangfire.SqlServer.SqlServerStorage|Start installing Hangfire SQL objects...
+2017-05-02 23:58:04.2454|INFO|Hangfire.SqlServer.SqlServerStorage|Hangfire SQL objects installed.
+2017-05-02 23:58:04.3111|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server
+2017-05-02 23:58:04.3211|INFO|Hangfire.BackgroundJobServer|Using job storage: 'SQL Server: DESKTOP-LR1A8BU@hangflare'
+2017-05-02 23:58:04.3211|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage:
+2017-05-02 23:58:04.3342|INFO|Hangfire.BackgroundJobServer|    Queue poll interval: 00:00:15.
+2017-05-02 23:58:04.3342|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+2017-05-02 23:58:04.3487|INFO|Hangfire.BackgroundJobServer|    Worker count: 20
+2017-05-02 23:58:04.3487|INFO|Hangfire.BackgroundJobServer|    Listening queues: 'default'
+2017-05-02 23:58:04.3487|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
+2017-05-02 23:58:04.3658|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
+2017-05-02 23:58:06.7811|INFO|Hangfire.Server.DelayedJobScheduler|1 scheduled job(s) enqueued.
+2017-05-02 23:58:28.2382|INFO|DiplomEm.TaskExecutor|execute task
+2017-05-02 23:58:42.1284|ERROR|DiplomEm.Controllers.HomeController|Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[DiplomEm.Core.News]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'a', line 1, position 5.
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   в Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   в DiplomEm.Controllers.HomeController.GetJsonResult(String js) в C:\Users\Stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\Controllers\HomeController.cs:строка 98
+2017-05-03 00:00:04.3650|INFO|DiplomEm.TaskExecutor|execute task
+2017-05-03 00:03:05.4751|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2017-05-03 00:05:17.0414|INFO|DiplomEm.MvcApplication|Application Start
+2017-05-03 00:05:19.4584|INFO|Hangfire.SqlServer.SqlServerStorage|Start installing Hangfire SQL objects...
+2017-05-03 00:05:19.7238|INFO|Hangfire.SqlServer.SqlServerStorage|Hangfire SQL objects installed.
+2017-05-03 00:05:19.7815|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server
+2017-05-03 00:05:19.7945|INFO|Hangfire.BackgroundJobServer|Using job storage: 'SQL Server: DESKTOP-LR1A8BU@hangflare'
+2017-05-03 00:05:19.8025|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage:
+2017-05-03 00:05:19.8025|INFO|Hangfire.BackgroundJobServer|    Queue poll interval: 00:00:15.
+2017-05-03 00:05:19.8201|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+2017-05-03 00:05:19.8201|INFO|Hangfire.BackgroundJobServer|    Worker count: 20
+2017-05-03 00:05:19.8336|INFO|Hangfire.BackgroundJobServer|    Listening queues: 'default'
+2017-05-03 00:05:19.8336|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
+2017-05-03 00:05:19.8471|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
+2017-05-03 00:06:09.7217|ERROR|DiplomEm.Controllers.HomeController|Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[DiplomEm.Core.News]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'a', line 1, position 5.
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   в Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   в DiplomEm.Controllers.HomeController.GetJsonResult(String js) в C:\Users\Stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\Controllers\HomeController.cs:строка 98
+2017-05-03 00:09:48.1743|INFO|DiplomEm.MvcApplication|Application Start
+2017-05-03 00:09:52.4773|INFO|Hangfire.SqlServer.SqlServerStorage|Start installing Hangfire SQL objects...
+2017-05-03 00:09:52.7207|INFO|Hangfire.SqlServer.SqlServerStorage|Hangfire SQL objects installed.
+2017-05-03 00:09:52.8063|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server
+2017-05-03 00:09:52.8168|INFO|Hangfire.BackgroundJobServer|Using job storage: 'SQL Server: DESKTOP-LR1A8BU@hangflare'
+2017-05-03 00:09:52.8168|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage:
+2017-05-03 00:09:52.8314|INFO|Hangfire.BackgroundJobServer|    Queue poll interval: 00:00:15.
+2017-05-03 00:09:52.8314|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+2017-05-03 00:09:52.8459|INFO|Hangfire.BackgroundJobServer|    Worker count: 20
+2017-05-03 00:09:52.8459|INFO|Hangfire.BackgroundJobServer|    Listening queues: 'default'
+2017-05-03 00:09:52.8459|INFO|Hangfire.BackgroundJobServer|    Shutdown timeout: 00:00:15
+2017-05-03 00:09:52.8634|INFO|Hangfire.BackgroundJobServer|    Schedule polling interval: 00:00:15
+2017-05-03 00:09:53.3633|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2017-05-03 00:09:55.3213|INFO|Hangfire.Server.DelayedJobScheduler|1 scheduled job(s) enqueued.
+2017-05-03 00:10:25.0347|ERROR|DiplomEm.Controllers.HomeController|Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[DiplomEm.Core.News]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'a', line 1, position 5.
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   в Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   в Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   в Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   в DiplomEm.Controllers.HomeController.GetJsonResult(String js) в C:\Users\Stas\documents\visual studio 2015\Projects\DiplomEm\DiplomEm\Controllers\HomeController.cs:строка 98
+2017-05-03 00:10:36.1254|INFO|DiplomEm.TaskExecutor|execute task
+2017-05-03 00:10:36.1254|INFO|DiplomEm.TaskExecutor|execute task
