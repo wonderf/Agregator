@@ -1,11 +1,10 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Start Page";
 }
 <div id="updown"></div>
 <div class="block">
     <p>
-        @using (Ajax.BeginForm("GetUrlPage", new AjaxOptions {UpdateTargetId="page", OnSuccess = "autosize($('#page'));$('#page').css('visibility','visible');$('#js').css('visibility','visible');$('#runner').css('visibility','visible')" }))
+        @using (Ajax.BeginForm("GetUrlPage", new AjaxOptions {UpdateTargetId="page", OnSuccess = "autosize($('#page'));$('#page').css('visibility','visible');$('#js').css('visibility','visible');$('#runner').css('visibility','visible');$('#url1').val($('#url').val());$('#url2').val($('#url').val());" }))
         {
             @Html.TextBox("url")
             <button class="button" id="btn" >Request</button>
@@ -14,10 +13,11 @@
     </div>
 @Html.TextArea("page", ViewData["url"])
 <div class="block">
-    @using (Ajax.BeginForm("GetJsonResult", new AjaxOptions {UpdateTargetId="news",OnSuccess="$('#taskCreator').css('visibility','visible')" }))
+    @using (Ajax.BeginForm("GetJsonResult", new AjaxOptions {UpdateTargetId="news",OnSuccess= "$('#taskCreator').css('visibility','visible');$('#code').val($('#js').val());" }))
     {
         <p>@Html.TextArea("js",new { @placeholder = "must return JSON.stringify" })</p>
         <p><button class="button" id="runner">Run</button></p>
+        <input id="url1" name="urlParametr" type="hidden" value="" />
     }
     <table id="news"></table>
     <div id="taskCreator">
@@ -28,12 +28,13 @@
         {
             <input type="number" size="10" name="time" min="0" max="10000" value="1">
             <button class="button">Execute</button>
+            <input id="url2" name="urlParametr" type="hidden" value="" />
+            <input id="code" name="code" type="hidden" value="" />
         }
     </div>
     <label id="result"></label>
 </div>
 <script>
-    
     var updownElem = document.getElementById('updown');
     setTimeout("autosize($('#js'))", 500);
     var pageYLabel = 0;

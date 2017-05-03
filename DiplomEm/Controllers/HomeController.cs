@@ -39,6 +39,7 @@ namespace DiplomEm.Controllers
                 "}}";
         List<News> model = new List<News>();
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        
         #endregion
         public HomeController(INewsRepository Rep)
         {
@@ -82,12 +83,13 @@ namespace DiplomEm.Controllers
                 {
                     logger.Error(e);
                 }
+                
+                
             }
-            Session["url"] = url;
             ViewData["url"] = answer;
             return PartialView();
         }
-        public ActionResult CreateTask(int time)
+        public ActionResult CreateTask(int time,string urlParametr,string code)
         {
             if (time < 1)
             {
@@ -95,26 +97,25 @@ namespace DiplomEm.Controllers
             }
             else
             {
-                RecurringJob.AddOrUpdate<TaskExecutor>(x=>x.TaskExec(Session["code"].ToString(),Session["url"].ToString()), Cron.MinuteInterval(time));
+                RecurringJob.AddOrUpdate<TaskExecutor>(x=>x.TaskExec(Session["code"].ToString(),urlParametr), Cron.MinuteInterval(time));
                 logger.Info("Add new task");
             }
             return PartialView();
         }
         
-        public ActionResult GetJsonResult(string js)
+        public ActionResult GetJsonResult(string js,string urlParametr)
         {
             String answer = String.Empty;
+            
             if (!string.IsNullOrEmpty(js))
             {
                 try
                 {
-                    String url = Session["url"].ToString();
                     js = js.Replace("return ", "var d=");
-                    String code = String.Format(template, url,js);
+                    String code = String.Format(template, urlParametr,js);
                     var func = Edge.Func(code);
                     String jsExecuter = func(@"USE THE FORCE").Result.ToString();
                     model = JsonConvert.DeserializeObject<List<News>>(jsExecuter);
-                    Session["code"] = js;
                 }
                 catch (Exception e)
                 {
