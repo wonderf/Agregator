@@ -1,1 +1,1 @@
-call npm install deferred jquery jsdom@9.12.0
+call npm install deferred jquery jsdom@9.12.0 htmltidy

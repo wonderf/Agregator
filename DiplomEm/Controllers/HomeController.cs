@@ -37,6 +37,23 @@ namespace DiplomEm.Controllers
                 "return function (data, callback) {{\n" +
                 "extract().done(function (result){{callback(null,result);}});\n" +
                 "}}";
+        private String tidyFormating = @"var tidy = require('htmltidy').tidy;
+var opts = {
+  doctype: 'html5',
+  indent: true,
+  bare: true,
+  breakBeforeBr: true,
+  hideComments: true,
+  fixUri: true,
+  wrap: 0
+};
+// default options
+
+return function(data,callback){
+	tidy(data, opts,function(err, html) {
+		callback(null,html);
+});
+}";
         List<News> model = new List<News>();
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         
@@ -78,6 +95,8 @@ namespace DiplomEm.Controllers
                         reader.Close();
                         dataStream.Close();
                     }
+                    var func = Edge.Func(tidyFormating);
+                    answer = func(answer).Result.ToString();
                 }
                 catch(Exception e)
                 {
