@@ -54,11 +54,29 @@ namespace DiplomEm.Controllers
         public PartialViewResult GetUrlPage(string url)
         {
             String answer = String.Empty;
+            StreamReader reader;
             if (!string.IsNullOrEmpty(url))
             {
                 try {
                     WebClient wc = new WebClient();
                     answer = wc.DownloadString(url);
+                    WebRequest request = WebRequest.Create(url);
+                    // If required by the server, set the credentials.
+                    request.Credentials = CredentialCache.DefaultCredentials;
+                    // Get the response.
+                    using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                    {
+                        Stream dataStream = response.GetResponseStream();
+                        if (response.CharacterSet.ToLower().Contains("utf-8"))
+                            reader = new StreamReader(dataStream, System.Text.Encoding.UTF8);
+                        else
+                            reader = new StreamReader(dataStream, System.Text.Encoding.Default);
+                        answer = reader.ReadToEnd();
+                        // Display the content.
+                        // Cleanup the streams and the response.
+                        reader.Close();
+                        dataStream.Close();
+                    }
                 }
                 catch(Exception e)
                 {

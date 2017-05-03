@@ -5,17 +5,19 @@
 <div id="updown"></div>
 <div class="block">
     <p>
-        @using (Ajax.BeginForm("GetUrlPage", new AjaxOptions {UpdateTargetId="page", OnSuccess = "autosize($('#page'))" }))
+        @using (Ajax.BeginForm("GetUrlPage", new AjaxOptions {UpdateTargetId="page", OnSuccess = "autosize($('#page'));$('#page').css('visibility','visible');$('#js').css('visibility','visible');$('#runner').css('visibility','visible')" }))
         {
             @Html.TextBox("url")
             <button class="button" id="btn" >Request</button>
         }
     </p>
-    <p>@Html.TextArea("page", ViewData["url"])</p>
+    </div>
+@Html.TextArea("page", ViewData["url"])
+<div class="block">
     @using (Ajax.BeginForm("GetJsonResult", new AjaxOptions {UpdateTargetId="news",OnSuccess="$('#taskCreator').css('visibility','visible')" }))
     {
         <p>@Html.TextArea("js",new { @placeholder = "must return JSON.stringify" })</p>
-        <p><button class="button">Run</button></p>
+        <p><button class="button" id="runner">Run</button></p>
     }
     <table id="news"></table>
     <div id="taskCreator">
