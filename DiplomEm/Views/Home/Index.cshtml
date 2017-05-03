@@ -24,7 +24,7 @@
         <p><label>Создание задачи</label>
         <p>Время,мин</p>
         </p>
-        @using (Ajax.BeginForm("CreateTask", new AjaxOptions { OnComplete = "$('#result').html('Задача сохранена');" }))
+        @using (Ajax.BeginForm("CreateTask", new AjaxOptions { OnSuccess= "$('#result').html('Задача сохранена');" }))
         {
             <input type="number" size="10" name="time" min="0" max="10000" value="1">
             <button class="button">Execute</button>

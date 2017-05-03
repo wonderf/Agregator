@@ -97,7 +97,7 @@ namespace DiplomEm.Controllers
             }
             else
             {
-                RecurringJob.AddOrUpdate<TaskExecutor>(x=>x.TaskExec(Session["code"].ToString(),urlParametr), Cron.MinuteInterval(time));
+                RecurringJob.AddOrUpdate<TaskExecutor>(x=>x.TaskExec(code,urlParametr), Cron.MinuteInterval(time));
                 logger.Info("Add new task");
             }
             return PartialView();
