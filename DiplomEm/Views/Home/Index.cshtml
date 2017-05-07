@@ -1,17 +1,23 @@
 ﻿@{
     ViewBag.Title = "Start Page";
 }
+
 <div id="updown"></div>
 <div class="block">
     <p>
-        @using (Ajax.BeginForm("GetUrlPage", new AjaxOptions {UpdateTargetId="page", OnSuccess = "autosize($('#page'));$('#page').css('visibility','visible');$('#js').css('visibility','visible');$('#runner').css('visibility','visible');$('#url1').val($('#url').val());$('#url2').val($('#url').val());" }))
+        @using (Ajax.BeginForm("GetUrlPage", new AjaxOptions
+        {
+            UpdateTargetId = "page",
+            OnBegin= "$('#page').empty();",
+            OnSuccess = "autosize($('#page'));$('#page').css('visibility','visible');$('#js').css('visibility','visible');$('#runner').css('visibility','visible');$('#url1').val($('#url').val());$('#url2').val($('#url').val());var a =$('#page').height();$('pre code').each(function(i, block) {hljs.highlightBlock(block);});;$('#page').height(a);"
+        }))
         {
             @Html.TextBox("url")
             <button class="button" id="btn" >Request</button>
         }
     </p>
     </div>
-@Html.TextArea("page", ViewData["url"])
+<pre ><code id="page"></code></pre>
 <div class="block">
     @using (Ajax.BeginForm("GetJsonResult", new AjaxOptions {UpdateTargetId="news",OnSuccess= "$('#taskCreator').css('visibility','visible');$('#code').val($('#js').val());" }))
     {
@@ -22,7 +28,7 @@
     <table id="news"></table>
     <div id="taskCreator">
         <p><label>Создание задачи</label>
-        <p>Время,мин</p>
+        <p>Интервал выполнения задачи, в минутах</p>
         </p>
         @using (Ajax.BeginForm("CreateTask", new AjaxOptions { OnSuccess= "$('#result').html('Задача сохранена');" }))
         {
