@@ -116,7 +116,7 @@ return function(data,callback){
             }
             else
             {
-                RecurringJob.AddOrUpdate<TaskExecutor>(x=>x.TaskExec(code,urlParametr), Cron.MinuteInterval(time));
+                RecurringJob.AddOrUpdate<TaskExecutor>(urlParametr,x=>x.TaskExec(code,urlParametr), Cron.MinuteInterval(time));
                 logger.Info("Add new task");
             }
             return PartialView();
