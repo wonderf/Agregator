@@ -19,9 +19,16 @@ namespace DiplomEm.Core.Objects
             var table = NewsList(sourceUrl);
             List<News> ins = new List<News>();
             ins.AddRange(n);
-            foreach(var e in table)
+            if (table != null)
             {
-                ins.RemoveAll(x=>x.title==e.title);
+                foreach (var e in table)
+                {
+                    ins.RemoveAll(x => x.title == e.title);
+                }
+            }
+            else
+            {
+                insertUrl(sourceUrl);
             }
             NewsSource source = _context.SourceSet.Where(s => s.url == sourceUrl).FirstOrDefault();
             ins.ForEach(s => s.source = source);
@@ -53,11 +60,13 @@ namespace DiplomEm.Core.Objects
         }
         public void insertUrl(String url)
         {
-            _context.SourceSet.Add(new NewsSource()
-            {
-                url = url
-            });
-            _context.SaveChanges();
+                _context.SourceSet.Add(new NewsSource()
+                {
+                    url = url
+                });
+                _context.SaveChanges();
+            
+            
         }
     }
 }

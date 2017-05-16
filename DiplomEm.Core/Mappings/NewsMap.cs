@@ -27,7 +27,6 @@ namespace DiplomEm.Core.Mappings
         public SourceMap(){
             HasKey(x => x.id);
             Property(x => x.id).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
-            Property(x => x.url);
             HasMany(x => x.NewsSet);
             ToTable("NewSource");
         }
