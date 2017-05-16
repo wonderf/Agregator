@@ -23,7 +23,7 @@ namespace DiplomEm.Core.Objects
             {
                 ins.RemoveAll(x=>x.title==e.title);
             }
-            NewsSource source = new NewsSource() { url = sourceUrl };
+            NewsSource source = _context.SourceSet.Where(s => s.url == sourceUrl).FirstOrDefault();
             ins.ForEach(s => s.source = source);
             var tr = _context.Database.BeginTransaction();
             try
