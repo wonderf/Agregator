@@ -18,5 +18,6 @@ namespace DiplomEm.Core
         { get; set; }
         public virtual String img
         { get; set; }
+        public virtual NewsSource source { get; set; }
     }
 }

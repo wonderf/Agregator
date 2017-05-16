@@ -64,6 +64,7 @@
     <Compile Include="Objects\INewsRepository.cs" />
     <Compile Include="Objects\News.cs" />
     <Compile Include="Objects\NewsRepository.cs" />
+    <Compile Include="Objects\NewsSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryModule.cs" />
   </ItemGroup>

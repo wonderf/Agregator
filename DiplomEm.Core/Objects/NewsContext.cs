@@ -13,7 +13,7 @@ namespace DiplomEm.Core
         {  }
 
         public DbSet<News> NewsSet { get; set; }
-
+        public DbSet<NewsSource> SourceSet { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

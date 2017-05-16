@@ -17,8 +17,18 @@ namespace DiplomEm.Core.Mappings
             Property(x => x.title);
             Property(x => x.text);
             Property(x => x.img);
-            Property(x => x.url);
+            HasRequired(x => x.source);
             ToTable("NewsSet");
+        }
+    }
+    class SourceMap : EntityTypeConfiguration<NewsSource>
+    {
+        public SourceMap(){
+            HasKey(x => x.id);
+            Property(x => x.id).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
+            Property(x => x.url);
+            HasMany(x => x.NewsSet);
+            ToTable("NewSource");
         }
     }
 }
