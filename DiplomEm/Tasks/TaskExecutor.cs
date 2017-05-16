@@ -44,7 +44,7 @@ namespace DiplomEm
             var func = Edge.Func(code);
             String jsExecuter = func(@"USE THE FORCE").Result.ToString();
             model = JsonConvert.DeserializeObject<List<News>>(jsExecuter);
-            rep.insertNews(model);
+            rep.insertNews(model,url);
             logger.Info("execute task");
         }
         

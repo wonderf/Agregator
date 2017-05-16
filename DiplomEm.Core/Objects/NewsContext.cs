@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DiplomEm.Core.Mappings;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace DiplomEm.Core
         public DbSet<NewsSource> SourceSet { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Configurations.Add(new NewsMap());
+            modelBuilder.Configurations.Add(new SourceMap());
             base.OnModelCreating(modelBuilder);
         }
     }

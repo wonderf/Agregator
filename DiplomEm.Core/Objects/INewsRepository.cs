@@ -9,6 +9,8 @@ namespace DiplomEm.Core.Objects
     public interface INewsRepository
     {
         IList<News> NewsList();
-        void insertNews(List<News> n);
+        IList<News> NewsList(String sourceUrl);
+        void insertNews(List<News> n, String sourceUrl);
+        void insertUrl(String url);
     }
 }

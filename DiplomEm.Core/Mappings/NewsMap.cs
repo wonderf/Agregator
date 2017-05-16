@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DiplomEm.Core.Mappings
 {
-    class NewsMap : EntityTypeConfiguration<News>
+    public class NewsMap : EntityTypeConfiguration<News>
     {
         public NewsMap()
         {
@@ -17,11 +17,12 @@ namespace DiplomEm.Core.Mappings
             Property(x => x.title);
             Property(x => x.text);
             Property(x => x.img);
+            Property(x => x.url);
             HasRequired(x => x.source);
             ToTable("NewsSet");
         }
     }
-    class SourceMap : EntityTypeConfiguration<NewsSource>
+    public class SourceMap : EntityTypeConfiguration<NewsSource>
     {
         public SourceMap(){
             HasKey(x => x.id);

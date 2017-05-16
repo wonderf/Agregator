@@ -90,8 +90,6 @@ return function(data,callback){
                         else
                             reader = new StreamReader(dataStream, System.Text.Encoding.Default);
                         answer = reader.ReadToEnd();
-                        // Display the content.
-                        // Cleanup the streams and the response.
                         reader.Close();
                         dataStream.Close();
                     }
@@ -118,6 +116,7 @@ return function(data,callback){
             {
                 RecurringJob.AddOrUpdate<TaskExecutor>(urlParametr,x=>x.TaskExec(code,urlParametr), Cron.MinuteInterval(time));
                 logger.Info("Add new task");
+                rep.insertUrl(urlParametr);
             }
             return PartialView();
         }

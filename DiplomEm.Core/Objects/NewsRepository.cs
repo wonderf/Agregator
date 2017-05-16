@@ -14,15 +14,17 @@ namespace DiplomEm.Core.Objects
             _context=context;
         }
 
-        public void insertNews(List<News> n)
+        public void insertNews(List<News> n,String sourceUrl)
         {
-            var table = NewsList();
+            var table = NewsList(sourceUrl);
             List<News> ins = new List<News>();
             ins.AddRange(n);
             foreach(var e in table)
             {
-                ins.RemoveAll(x=>x.url==e.url&&x.title==e.title);
+                ins.RemoveAll(x=>x.title==e.title);
             }
+            NewsSource source = new NewsSource() { url = sourceUrl };
+            ins.ForEach(s => s.source = source);
             var tr = _context.Database.BeginTransaction();
             try
             {
@@ -42,6 +44,20 @@ namespace DiplomEm.Core.Objects
         public IList<News> NewsList()
         {
             return _context.NewsSet.ToList();
+        }
+
+        public IList<News> NewsList(String sourceUrl)
+        {
+            return _context.SourceSet.Where(s => s.url == sourceUrl).FirstOrDefault() != null ?
+                _context.NewsSet.Where(s => s.source.url == sourceUrl).ToList() :null;
+        }
+        public void insertUrl(String url)
+        {
+            _context.SourceSet.Add(new NewsSource()
+            {
+                url = url
+            });
+            _context.SaveChanges();
         }
     }
 }
