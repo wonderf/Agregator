@@ -76,3 +76,4 @@ _[Ss]cripts
 .vs
 *.ncrunchsolution
 *.dot[Cc]over
+/DiplomEm/log.txt
